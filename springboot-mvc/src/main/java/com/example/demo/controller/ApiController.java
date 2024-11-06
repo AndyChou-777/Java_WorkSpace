@@ -175,7 +175,29 @@ public class ApiController {
 					);
 			
 			// 已新增全局錯誤處理，此處可不加 Try-catch 處理
+			
 			return ResponseEntity.ok(ApiResponse.success("查詢成功", data));
+	}
+	/**
+	 * 7. 多筆參數轉 Map
+	 * name 書名(String), price 價格(Double), amount 數量(Integer), pub 出刊/停刊(Boolean)
+	 * 路徑: /book?name=Math&price=12.5&amount=10&pub=true
+	 * 路徑: /book?name=English&price=10.5&amount=20&pub=false
+	 * 網址: http://localhost:8080/api/book?name=Math&price=12.5&amount=10&pub=true
+	 * 網址: http://localhost:8080/api/book?name=English&price=10.5&amount=20&pub=false
+	 * 自動會轉為 Map 集合
+	 * */
+	@GetMapping("/book")
+	public ResponseEntity<ApiResponse<Object>> getBookInfo(@RequestParam Map<String, Object> bookMap){ // Spring 會自動塞入
+		return ResponseEntity.ok(ApiResponse.success("查詢成功", bookMap));
+	}
+	
+	/**
+	 * 8. 多筆參數轉指定 Bean 物件
+	 */
+	@GetMapping("/book")
+	public ResponseEntity<ApiResponse<Object>> getBookInfo(Book book) {
+		return ResponseEntity.ok(ApiResponse.success("查詢成功", book));
 	}
 	
 }
