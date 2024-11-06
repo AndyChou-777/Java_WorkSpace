@@ -11,10 +11,12 @@ import java.util.stream.IntStream;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.demo.model.bean.Book;
 import com.example.demo.response.ApiResponse;
 
 // 了解各種不同 URL 與參數的傳遞接收
@@ -187,17 +189,46 @@ public class ApiController {
 	 * 網址: http://localhost:8080/api/book?name=English&price=10.5&amount=20&pub=false
 	 * 自動會轉為 Map 集合
 	 * */
+	
+	/**
+ 	暫時隱藏，避免同 Link
 	@GetMapping("/book")
-	public ResponseEntity<ApiResponse<Object>> getBookInfo(@RequestParam Map<String, Object> bookMap){ // Spring 會自動塞入
+	public ResponseEntity<ApiResponse<Object>> getBookInfo(@RequestParam Map<String, Object> bookMap){ // Spring 會自動塞入參數和值
 		return ResponseEntity.ok(ApiResponse.success("查詢成功", bookMap));
 	}
+	 */
 	
 	/**
 	 * 8. 多筆參數轉指定 Bean 物件
 	 */
-	@GetMapping("/book")
+	@GetMapping("/book") // 結果同上，只是另外建構一個 BooK 類別來代替
 	public ResponseEntity<ApiResponse<Object>> getBookInfo(Book book) {
 		return ResponseEntity.ok(ApiResponse.success("查詢成功", book));
+	}
+	
+	/**
+	 * 9. 路徑參數
+	 * 路徑: /book/1
+	 * 路徑: /book/3
+	 * 網址: http://localhost:8080/api/book/1
+	 * 網址: http://localhost:8080/api/book/3
+	 */
+	@GetMapping("/book/{id}")
+	public ResponseEntity<ApiResponse<Book>> getBookById(@PathVariable Integer id) {
+		List<Book> books = List.of(
+				new Book(1, "Math1", 12.5, 20, true),
+				new Book(2, "Math2", 13.5, 21, false),
+				new Book(3, "Math3", 14.5, 22, true),
+				new Book(4, "Math4", 15.5, 23, false),
+				new Book(5, "Math5", 16.5, 24, true));
+		
+		Optional<Book> optBook = books.stream().filter(b -> b.getId().equals(id)).findAny();
+		
+		if(optBook.isEmpty()) {
+			throw new RuntimeException("查無此書");
+		}
+		
+		return ResponseEntity.ok(ApiResponse.success("查詢成功", optBook.get()));
 	}
 	
 }
