@@ -159,7 +159,6 @@ public class ApiController {
 	@GetMapping(value = "/exam", produces = "application/json;charset=utf-8")
 	public ResponseEntity<ApiResponse<Object>> getExamInfo(@RequestParam("score") List<String> scores) {
 		
-		try {
 			// 統計資料
 			IntSummaryStatistics stat = scores.stream().mapToInt(Integer::parseInt).summaryStatistics();
 			// 利用 Collectors.partitioningBy 分組
@@ -175,10 +174,8 @@ public class ApiController {
 					"不及格分數", resultMap.get(false)
 					);
 			
+			// 已新增全局錯誤處理，此處可不加 Try-catch 處理
 			return ResponseEntity.ok(ApiResponse.success("查詢成功", data));
-		} catch (Exception e) {
-			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ApiResponse.error(HttpStatus.BAD_REQUEST.value(), "參數不正確"));
-		}
 	}
 	
 }
