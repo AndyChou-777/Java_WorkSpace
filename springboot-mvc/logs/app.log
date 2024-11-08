@@ -72,3 +72,6 @@ java.lang.IllegalStateException: Could not resolve parameter [0] in public org.s
 	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
 
 2024-11-08T10:14:39.699+08:00  INFO 6724 --- [springboot-mvc] [http-nio-8080-exec-3] c.example.demo.controller.ApiController  : 這是一條日誌訊息
+2024-11-08T11:47:01.656+08:00  INFO 6724 --- [springboot-mvc] [RMI TCP Connection(101)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2024-11-08T11:47:01.661+08:00  INFO 6724 --- [springboot-mvc] [RMI TCP Connection(101)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-11-08T11:47:01.662+08:00  INFO 6724 --- [springboot-mvc] [RMI TCP Connection(101)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
