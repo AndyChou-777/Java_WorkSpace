@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import java.lang.System.Logger;
 import java.util.IntSummaryStatistics;
 import java.util.List;
 import java.util.Map;
@@ -8,6 +9,7 @@ import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,6 +26,8 @@ import com.example.demo.response.ApiResponse;
 @RequestMapping("/api") //統一 URL 前綴
 public class ApiController {
 	
+	private static final org.slf4j.Logger logger = LoggerFactory.getLogger(ApiController.class);
+	
 	/** 
 	 * 1.歡迎頁 
 	 * 路徑: /welcome
@@ -32,10 +36,22 @@ public class ApiController {
 	 * 網址: http://localhost:8080/api/home
 	 */
 
+	/** 
+	 * @GetMapping(value = {"/welcome", "/home"})
+	 * @return
+	 *public String welcome() {
+	 *	return "Welcome";
+	 *}
+	 */
+	
+	//測試 Log 設定
+	
 	@GetMapping(value = {"/welcome", "/home"})
-	public String welcome() {
-		return "Welcome";
-	}
+    public String welcome() {
+        logger.info("這是一條日誌訊息");
+        return "Welcome";
+    }
+
 	
 	/**
 	 * 2. ?帶參數
