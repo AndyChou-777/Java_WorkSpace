@@ -34,3 +34,58 @@
 2024-11-08T13:53:11.012+08:00  INFO 5928 --- [springboot-ssr-room] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-11-08T13:53:11.013+08:00  INFO 5928 --- [springboot-ssr-room] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2024-11-08T13:53:11.020+08:00  INFO 5928 --- [springboot-ssr-room] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-11-08T15:15:06.047+08:00  INFO 6964 --- [springboot-ssr-room] [main] com.example.demo.RoomJdbcTests           : Starting RoomJdbcTests using Java 21.0.4 with PID 6964 (started by NTPU in E:\Java_WorkSpace\springboot-ssr-room)
+2024-11-08T15:15:06.048+08:00  INFO 6964 --- [springboot-ssr-room] [main] com.example.demo.RoomJdbcTests           : No active profile set, falling back to 1 default profile: "default"
+2024-11-08T15:15:06.517+08:00  INFO 6964 --- [springboot-ssr-room] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-08T15:15:06.536+08:00  INFO 6964 --- [springboot-ssr-room] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 0 JPA repository interfaces.
+2024-11-08T15:15:06.870+08:00  INFO 6964 --- [springboot-ssr-room] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-08T15:15:06.927+08:00  INFO 6964 --- [springboot-ssr-room] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-11-08T15:15:06.963+08:00  INFO 6964 --- [springboot-ssr-room] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-08T15:15:07.265+08:00  INFO 6964 --- [springboot-ssr-room] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-08T15:15:07.298+08:00  INFO 6964 --- [springboot-ssr-room] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-08T15:15:07.473+08:00  INFO 6964 --- [springboot-ssr-room] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@24e0989e
+2024-11-08T15:15:07.474+08:00  INFO 6964 --- [springboot-ssr-room] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-08T15:15:08.246+08:00  INFO 6964 --- [springboot-ssr-room] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-08T15:15:08.283+08:00  INFO 6964 --- [springboot-ssr-room] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-08T15:15:08.430+08:00  WARN 6964 --- [springboot-ssr-room] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-08T15:15:08.723+08:00  INFO 6964 --- [springboot-ssr-room] [main] com.example.demo.RoomJdbcTests           : Started RoomJdbcTests in 2.949 seconds (process running for 3.902)
+2024-11-08T15:15:09.327+08:00  INFO 6964 --- [springboot-ssr-room] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-08T15:15:09.328+08:00  INFO 6964 --- [springboot-ssr-room] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-11-08T15:15:09.334+08:00  INFO 6964 --- [springboot-ssr-room] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-11-08T15:22:52.936+08:00  INFO 12520 --- [springboot-ssr-room] [main] com.example.demo.RoomJdbcTests           : Starting RoomJdbcTests using Java 21.0.4 with PID 12520 (started by NTPU in E:\Java_WorkSpace\springboot-ssr-room)
+2024-11-08T15:22:52.938+08:00  INFO 12520 --- [springboot-ssr-room] [main] com.example.demo.RoomJdbcTests           : No active profile set, falling back to 1 default profile: "default"
+2024-11-08T15:22:53.420+08:00  INFO 12520 --- [springboot-ssr-room] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-08T15:22:53.440+08:00  INFO 12520 --- [springboot-ssr-room] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 0 JPA repository interfaces.
+2024-11-08T15:22:53.768+08:00  INFO 12520 --- [springboot-ssr-room] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-08T15:22:53.821+08:00  INFO 12520 --- [springboot-ssr-room] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-11-08T15:22:53.855+08:00  INFO 12520 --- [springboot-ssr-room] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-08T15:22:54.160+08:00  INFO 12520 --- [springboot-ssr-room] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-08T15:22:54.192+08:00  INFO 12520 --- [springboot-ssr-room] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-08T15:22:54.368+08:00  INFO 12520 --- [springboot-ssr-room] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@70b38e0
+2024-11-08T15:22:54.370+08:00  INFO 12520 --- [springboot-ssr-room] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-08T15:22:55.177+08:00  INFO 12520 --- [springboot-ssr-room] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-08T15:22:55.218+08:00  INFO 12520 --- [springboot-ssr-room] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-08T15:22:55.375+08:00  WARN 12520 --- [springboot-ssr-room] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-08T15:22:55.655+08:00  INFO 12520 --- [springboot-ssr-room] [main] com.example.demo.RoomJdbcTests           : Started RoomJdbcTests in 2.991 seconds (process running for 3.923)
+2024-11-08T15:22:55.972+08:00  INFO 12520 --- [springboot-ssr-room] [main] c.e.d.r.impl.RoomRepositoryJdbcImpl      : org.springframework.dao.EmptyResultDataAccessException: Incorrect result size: expected 1, actual 0
+2024-11-08T15:22:56.287+08:00  INFO 12520 --- [springboot-ssr-room] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-08T15:22:56.288+08:00  INFO 12520 --- [springboot-ssr-room] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-11-08T15:22:56.294+08:00  INFO 12520 --- [springboot-ssr-room] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-11-08T15:27:20.112+08:00  INFO 4764 --- [springboot-ssr-room] [main] com.example.demo.RoomJdbcTests           : Starting RoomJdbcTests using Java 21.0.4 with PID 4764 (started by NTPU in E:\Java_WorkSpace\springboot-ssr-room)
+2024-11-08T15:27:20.114+08:00  INFO 4764 --- [springboot-ssr-room] [main] com.example.demo.RoomJdbcTests           : No active profile set, falling back to 1 default profile: "default"
+2024-11-08T15:27:20.584+08:00  INFO 4764 --- [springboot-ssr-room] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-08T15:27:20.603+08:00  INFO 4764 --- [springboot-ssr-room] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 0 JPA repository interfaces.
+2024-11-08T15:27:20.932+08:00  INFO 4764 --- [springboot-ssr-room] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-08T15:27:20.991+08:00  INFO 4764 --- [springboot-ssr-room] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-11-08T15:27:21.026+08:00  INFO 4764 --- [springboot-ssr-room] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-08T15:27:21.329+08:00  INFO 4764 --- [springboot-ssr-room] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-08T15:27:21.363+08:00  INFO 4764 --- [springboot-ssr-room] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-08T15:27:21.541+08:00  INFO 4764 --- [springboot-ssr-room] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@33dcbbfa
+2024-11-08T15:27:21.543+08:00  INFO 4764 --- [springboot-ssr-room] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-08T15:27:22.295+08:00  INFO 4764 --- [springboot-ssr-room] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-08T15:27:22.332+08:00  INFO 4764 --- [springboot-ssr-room] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-08T15:27:22.480+08:00  WARN 4764 --- [springboot-ssr-room] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-08T15:27:22.766+08:00  INFO 4764 --- [springboot-ssr-room] [main] com.example.demo.RoomJdbcTests           : Started RoomJdbcTests in 2.925 seconds (process running for 3.935)
+2024-11-08T15:27:23.340+08:00  INFO 4764 --- [springboot-ssr-room] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-08T15:27:23.341+08:00  INFO 4764 --- [springboot-ssr-room] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-11-08T15:27:23.347+08:00  INFO 4764 --- [springboot-ssr-room] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
