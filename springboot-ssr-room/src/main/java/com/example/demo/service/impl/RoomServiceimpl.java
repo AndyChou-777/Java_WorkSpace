@@ -6,6 +6,7 @@ import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.example.demo.exception.RoomAlreadyExistsException;
 import com.example.demo.exception.RoomException;
@@ -16,6 +17,7 @@ import com.example.demo.model.entity.Room;
 import com.example.demo.repository.RoomRepositoryJdbc;
 import com.example.demo.service.RoomService;
 
+@Service
 public class RoomServiceimpl implements RoomService{
 	
 	@Autowired
