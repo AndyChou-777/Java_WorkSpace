@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- No-Catch -->
+	    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+	    <meta http-equiv="Pragma" content="no-cache">
+	    <meta http-equiv="Expires" content="0">
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <title>Room Management with RESTful API(Native JS)</title>
+		<!-- ? 放 Math.random() 可以防止 css catch -->
+    	<link rel="stylesheet" href="./css/room.css?" + Math.random() + "">
+	</head>
+	<body>
+		<!-- 網頁內容 -->
+		<div id="root">
+			<h1>Room Management</h1>
+			
+			<!-- 房間列表 -->
+			<h2>Room List</h2>
+			<ul id="roomList"></ul>
+			
+			<!-- 新增房間表單 -->
+			<h2>Add Room</h2>
+			<div>
+				Room Id: <input type="text" id="roomId" placeholder="Room Id"><p />
+				Room Name: <input type="text" id="roomName" placeholder="Room Name"><p />
+				Room Size: <input type="text" id="roomSize" placeholder="Room Size"><p />
+				<button onclick="addRoom()">Add</button><p />
+				<div id="addResult"></div>
+			</div>
+			
+			
+			<!-- 修改房間表單 pop-up 小視窗 (Modal) -->
+			
+		</div>
+		<!-- 引入自訂的 JavaScript 檔案 -->
+    	<!-- ? 放 Math.random() 可以防止 js catch -->
+		<script src="./js/room.js?" + Math.random() + ""></script>
+	</body>
+</html>
