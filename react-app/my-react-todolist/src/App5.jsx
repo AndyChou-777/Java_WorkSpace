@@ -3,6 +3,8 @@ import './App.css';
 import TodoList from './components/TodoList';
 import TodoInput from './components/TodoInput';
 
+import 'bootstrap/dist/css/bootstrap.min.css'; // 引入 Bootstrap 樣式
+
 function App() {
   const [todos, setTodos] = useState([
     { id: 1, text: '吃早餐', completed: true },
@@ -34,8 +36,8 @@ function App() {
   };
 
   return (
-    <div>
-      <h1>My Todo List</h1>
+    <div className='container mt-5' >
+      <h1 className='text-center mb-4' >My Todo List</h1>
       <TodoInput todo={todo} onChange={handleChange} onAdd={handleAdd} />
       <TodoList todos={todos} onToggleCompletion={toggleCompletion} />
     </div>
