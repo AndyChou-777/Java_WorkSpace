@@ -22,9 +22,21 @@ import com.example.todolist.model.dto.TodoDTO;
 import com.example.todolist.response.ApiResponse;
 import com.example.todolist.service.TodoService;
 
+/**
+ * WEB API
+ * ------------------------------------------
+ * servlet-path: /todolist  (@RequestMapping)
+ * ------------------------------------------
+ * GET    "/"     獲取所有待辦事項
+ * POST   "/"     新增待辦事項
+ * PUT    "/{id}" 更新待辦事項
+ * DELETE "/{id}" 刪除待辦事項
+ * ------------------------------------------
+ * */
+
 @RestController
 @RequestMapping("/todolist")
-@CrossOrigin(origins = "http:localhost:5173") // 跨域請求
+@CrossOrigin(origins = "http://localhost:5173") // 跨域請求
 public class TodoController {
 
 	@Autowired 
