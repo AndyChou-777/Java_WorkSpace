@@ -3,6 +3,7 @@ package com.example.tx.service.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.example.tx.exception.InsufficientAmount;
 import com.example.tx.repository.BookInventoryRepository;
 import com.example.tx.repository.BookRepository;
 import com.example.tx.repository.WalletRepository;
@@ -36,7 +37,7 @@ public class BookServiceImpl implements BookService {
 	}
 
 	@Override
-	public void reduceBookAmount(Integer bookId, Integer amountToReduce) {
+	public void reduceBookAmount(Integer bookId, Integer amountToReduce)  {
 		// 1. 檢查庫存
 		Integer bookAmount = getBookAmount(bookId);
 		if(bookAmount < amountToReduce) {
@@ -47,11 +48,11 @@ public class BookServiceImpl implements BookService {
 	}
 
 	@Override
-	public void reduceWalletBalance(String username, Integer bookPrice) {
+	public void reduceWalletBalance(String username, Integer bookPrice) throws InsufficientAmount {
 		// 1. 檢查餘額
 		Integer walletBalance = getWalletBalance(username);
 		if(walletBalance < bookPrice) {
-			throw new RuntimeException(String.format("username: %s 餘額不足 (%d < %d)%n", username, walletBalance, bookPrice));
+			throw new InsufficientAmount(String.format("username: %s 餘額不足 (%d < %d)%n", username, walletBalance, bookPrice));
 		}
 		// 2. 更新餘額
 		walletRepository.updateWalletBalance(bookPrice, username);
