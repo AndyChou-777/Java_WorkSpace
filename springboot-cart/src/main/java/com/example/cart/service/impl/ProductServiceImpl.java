@@ -6,6 +6,7 @@ import java.util.stream.Collectors;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.example.cart.model.dto.ProductDTO;
 import com.example.cart.model.dto.UserDTO;
@@ -15,6 +16,7 @@ import com.example.cart.model.entity.User;
 import com.example.cart.repository.ProductRepository;
 import com.example.cart.service.ProductService;
 
+@Service
 public class ProductServiceImpl implements ProductService {
 	
 	@Autowired
