@@ -1,11 +1,14 @@
 package com.example.cart.service.impl;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.example.cart.model.dto.FavoriteProductDTO;
+import com.example.cart.model.dto.FavoriteUserDTO;
 import com.example.cart.model.dto.LoginDTO;
 import com.example.cart.model.dto.UserDTO;
 import com.example.cart.model.entity.User;
@@ -46,6 +49,30 @@ public class UserServiceImpl implements UserService {
 		userRepository.save(user);
 
 		return Optional.of(modelMapper.map(user, UserDTO.class));
+	}
+
+	@Override
+	public List<FavoriteProductDTO> getFavoriteProducts(Long userId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<FavoriteUserDTO> getFavoriteUsers(Long productId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void addFavoriteProduct(Long userId, Long productId) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void removeFavoriteProduct(Long userId, Long productId) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
