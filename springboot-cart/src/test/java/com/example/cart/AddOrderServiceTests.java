@@ -20,20 +20,20 @@ public class AddOrderServiceTests {
 	
 	@Autowired
 	private OrderService orderService;
-
+	
 	@Autowired
 	private ProductService productService;
-
+	
 	@Test
 	public void findOrder() {
 		System.out.println("筆數: " + orderService.findOrdersByUserId(2L).size());
 	}
-
+	
 	@Test
 	public void addOrder() {
 		ProductDTO product = productService.getProductById(1L).get();
 		Long userId = 2L;
-
+		
 		OrderItemDTO item = new OrderItemDTO();
 		item.setQuantity(1);
 		item.setProduct(product);
@@ -41,13 +41,13 @@ public class AddOrderServiceTests {
 		OrderItemDTO item2 = new OrderItemDTO();
 		item2.setQuantity(2);
 		item2.setProduct(product);
-
+		
 		List<OrderItemDTO> items = new ArrayList<>();
 		items.add(item);
 		items.add(item2);
-
+		
 		orderService.saveOrder(userId, items);
 		System.out.println("新增訂單成功");
 	}
-
+	
 }

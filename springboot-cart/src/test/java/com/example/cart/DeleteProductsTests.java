@@ -1,7 +1,9 @@
 package com.example.cart;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+
 import com.example.cart.model.entity.Product;
 import com.example.cart.model.entity.ProductImage;
 import com.example.cart.repository.ProductImageRepository;
@@ -14,6 +16,7 @@ import jakarta.persistence.OneToOne;
 class DeleteProductsTests {
     @Autowired
     ProductRepository productRepository;
+
     @Test
     void add() {
         Product product = productRepository.findById(2L).get();
@@ -21,6 +24,6 @@ class DeleteProductsTests {
         // 因為 Product 與 ProductImage 的一對一關聯 (單向) 有設定聯及操作 
         // @OneToOne(cascade = CascadeType.ALL)
         productRepository.delete(product);
-
+        
     }
 }

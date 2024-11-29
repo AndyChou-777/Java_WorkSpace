@@ -12,13 +12,13 @@ import lombok.Data;
 @Entity
 @Table(name = "product_image")
 public class ProductImage {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-
+	// 修改 imageBase64 欄位的註解為長文本
 	@Column(columnDefinition = "LONGTEXT")
 	private String imageBase64;
 	
 }
-

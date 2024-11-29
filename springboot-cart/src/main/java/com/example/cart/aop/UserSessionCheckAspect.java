@@ -13,12 +13,12 @@ import jakarta.servlet.http.HttpSession;
 /**
  * 切面類別：UserSessionCheckAspect
  *
- * 此類別負責檢查所有被 @CheckUserSession 註解標記的方法是否符合用戶會話的條件。
- * 主要作用是攔截這些方法的執行，確保用戶已登入且會話有效，否則阻止方法執行。
+ * 此類別負責檢查所有被 @CheckUserSession 註解標記的方法是否符合用戶會話session的條件。
+ * 主要作用是攔截這些方法的執行，確保用戶已登入且會話session有效，否則阻止方法執行。
  *
  * 功能：
  * - 在方法執行之前，檢查 HttpSession 中是否有 "userDTO"（用戶資訊）。
- * - 若無 "userDTO" 或會話過期，拋出 UnauthorizedException，返回未授權錯誤。
+ * - 若無 "userDTO" 或會話session過期，拋出 UnauthorizedException，返回未授權錯誤。
  *
  * AOP 設定：
  * - @Aspect：標記此類別為切面類別。
@@ -50,3 +50,12 @@ public class UserSessionCheckAspect {
 	}
 	
 }
+
+
+
+
+
+
+
+
+

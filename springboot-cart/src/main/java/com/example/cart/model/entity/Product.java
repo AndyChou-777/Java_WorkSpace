@@ -1,7 +1,10 @@
 package com.example.cart.model.entity;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.Set;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
@@ -31,11 +34,10 @@ public class Product {
 	private List<OrderItem> orderItems;
 	
 	// 與 ProductImage 的一對一關聯 (單向)
-	@OneToOne(cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "product_image_id")
     private ProductImage productImage;
 	
-	 @ManyToMany(mappedBy = "favoriteProducts")
-	    private Set<User> favoriteUsers;
+    @ManyToMany(mappedBy = "favoriteProducts")
+    private Set<User> favoriteUsers;
 }
-

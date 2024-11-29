@@ -19,7 +19,6 @@ function App() {
             return (<li key={index}>{todo}</li>)
           })
         }
-
       </ul>
     </>
   )
