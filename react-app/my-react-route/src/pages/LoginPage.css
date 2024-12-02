@@ -1,58 +1,95 @@
+/* 登入頁面樣式 */
 .login-page {
-    width: 100%;
-    max-width: 400px;
-    margin: 100px auto;
-    padding: 20px;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  h2 {
-    text-align: center;
-    color: #333;
-  }
-  
-  .form-group {
-    margin-bottom: 15px;
-  }
-  
-  label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  
-  input[type="text"],
-  input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  input[type="text"]:focus,
-  input[type="password"]:focus {
-    border-color: #0066cc;
-    outline: none;
-  }
-  
-  .login-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #0066cc;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  .login-button:hover {
-    background-color: #004c99;
-  }
-  
-  .login-button:active {
-    background-color: #003366;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #333;
+}
+
+/* 用戶選擇區塊 */
+.user-type-selector {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.user-type-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+  margin: 0 10px;
+}
+
+.user-type-button.active {
+  background-color: #0066cc;
+  color: white;
+}
+
+form {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: #0066cc;
+  outline: none;
+}
+
+.login-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #0066cc;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #004c99;
+}
+
+.login-button:active {
+  background-color: #003366;
+}
   
