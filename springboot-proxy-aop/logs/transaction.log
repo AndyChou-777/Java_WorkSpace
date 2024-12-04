@@ -1,7 +1,6 @@
-2024-12-03 13:47:07 - [c.e.p.TestTransactionService] - Starting TestTransactionService using Java 21.0.4 with PID 4296 (started by NTPU in E:\Java_WorkSpace\springboot-proxy-aop)
-2024-12-03 13:47:07 - [c.e.p.TestTransactionService] - No active profile set, falling back to 1 default profile: "default"
-2024-12-03 13:47:08 - [c.e.p.TestTransactionService] - Started TestTransactionService in 0.957 seconds (process running for 2.095)
-2024-12-03 13:47:08 - [c.e.p.s.i.TransactionAspect] - Before amount = 100
-2024-12-03 13:47:08 - [c.e.p.s.i.TransactionAspect] - After pay ...
-2024-12-03 13:47:08 - [c.e.p.s.i.TransactionAspect] - 支付 100 元
-2024-12-03 13:47:08 - [c.e.p.s.i.TransactionAspect] - Before amount = -50
+2024-12-04 10:57:16 - [c.e.p.TestBMIService] - Starting TestBMIService using Java 21.0.4 with PID 7420 (started by NTPU in E:\Java_WorkSpace\springboot-proxy-aop)
+2024-12-04 10:57:16 - [c.e.p.TestBMIService] - No active profile set, falling back to 1 default profile: "default"
+2024-12-04 10:57:17 - [c.e.p.TestBMIService] - Started TestBMIService in 0.606 seconds (process running for 1.159)
+2024-12-04 10:57:17 - [c.e.p.s.i.BMIServiceAspect] - h=170.0, w=60.0
+2024-12-04 10:57:17 - [c.e.p.s.i.BMIServiceAspect] - bmi=20.761245674740486
+2024-12-04 10:57:17 - [c.e.p.s.i.BMIServiceAspect] - h=null, w=60.0
