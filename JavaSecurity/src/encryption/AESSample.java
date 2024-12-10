@@ -44,7 +44,7 @@ public class AESSample {
 		
 	}
 	
-	// 讀取金鑰檔案
+	// 讀取金鑰檔案 --
 	private static SecretKeySpec loadKeyFromFile(String filePath) throws Exception {
 		String keyBase64 = Files.readString(Path.of(filePath));
 		byte[] keyBytes = Base64.getDecoder().decode(keyBase64);
