@@ -16,6 +16,7 @@ import security.KeyUtil;
  * 
  * 如何得知 my_salary.txt 是由 HR 所發佈的 ? (來源端確認)
  * */
+
 public class SalaryProtectionVerify {
 	public static void main(String[] args) throws Exception {
 		String filePath = "src/mac/my_salary.txt";

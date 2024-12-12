@@ -14,6 +14,7 @@ import security.KeyUtil;
  * 薪資檔案位置   : src/mac/my_salary.txt
  * macKey檔案位置: src/mac/macKey.key
  * */
+
 public class SalaryProtectionCreator {
 	public static void main(String[] args) throws Exception {
 		String filePath = "src/mac/my_salary.txt";
